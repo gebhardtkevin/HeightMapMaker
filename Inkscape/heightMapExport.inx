@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Height Map Exporter</_name>
+    <id>de.kg.filter.heightMap.export</id>
+	<dependency type="executable" location="extensions">heightMapExport.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+
+    <param name="path" type="string" _gui-text="Verzeichnis:">~/</param>
+	<param name="file" type="string" _gui-text="Dateiname(ohne Endung):">CouterLineExported</param>
+
+	<effect needs-live-preview="false">
+
+    <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="Height Map"/>
+        </effects-menu>
+    </effect>
+    <script>
+       <command reldir="extensions" interpreter="python">heightMapExport.py</command>
+    </script>
+</inkscape-extension>
